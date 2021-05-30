@@ -16,7 +16,6 @@
  p,li{
    font-family: 'Cormorant Garamond', serif;
    font-size: 25px;
-   font-wight: 1000;
  }
  
  /* nav bar*/
@@ -27,24 +26,44 @@
  .navbar-nav li a{
    text-align: center;
    padding: 5px 20px;
+   margin: 0 5px;
    font-size: 22px;
    transition: .5s;
+   border: 1px solid black;
+   border-radius: 5px;
  }
  
  .navbar-nav li a:hover{
-   background: #12C7B8;
+   background: #283d3b;
    border-radius: 6px;
+   color: rgb(255, 255, 255) !important;
  }
  /* my banner*/
  .my-banner{
-   background: url(https://i.imgur.com/p7xIlQz.jpg) no-repeat center;
+   background: url(https://i.imgur.com/p7xIlQz.jpg) no-repeat bottom center;
    background-size: cover;
-   padding: 550px 0 0;
+   padding: 50vh 0;
+   position: relative;
+   z-index: 1;
+  }
+
+  .my-banner::before{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
   }
 
  .banner{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between !important;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
  }
  
  .banner img{
@@ -61,7 +80,7 @@
     opacity: 1;
   }
    100%{
-     transform: translateY(-640px);
+     transform: translateY(-600px);
      opacity: 0;
    }
  }
@@ -155,8 +174,23 @@
 }
  /* your welcome*/
  .your-welcome{
-    background: linear-gradient(45deg, #DFFF55, #FFFFFF, #FFFFFF, #FFFFFF, #FFC065);
+    background: url(https://i.imgur.com/ZzygK7o.jpg) repeat center center;
+    background-size: cover;
     overflow: hidden;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 1;
+  }
+
+  .your-welcome::before{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.900);
   }
   
  .welcome{
@@ -184,12 +218,19 @@
  }
  
  .work-img img{
-   width: 20%;
+   border-radius: 5px;
+   width: 24%;
+   padding: 3px;
+   height: 60px;
+   border: 1px solid rgb(255, 5, 5);
+   background: white;
  }
 
  /* service*/
  .services{
-   background: linear-gradient(135deg, #8AFFEE, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #8AFFB9);
+   background: url(https://i.imgur.com/mNZrC2t.jpg
+   ) no-repeat center center;
+   background-size: cover;
  }
  
  .s-s h1{
@@ -198,6 +239,7 @@
  }
  
  .s-i{
+
    text-align: center;
    border: 2px solid #D3D3D3;
    border-radius: 50%;
@@ -219,8 +261,38 @@
  
  /* process*/
  .process{
-   background: linear-gradient(45deg, #FFF54D, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #F12FFF);
+   background: url(https://i.imgur.com/oIEU5gZ.jpg
+   ) no-repeat center center;
+   background-size: cover;
+   position: relative;
+   z-index: 1;
+   color: #FFFFFF;
  }
+
+ .process::before{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.900);
+}
+
+.box-boder{
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  height: 480px;
+  border: 1px solid #D3D3D3;
+  transition: all .5s;
+}
+
+.box-boder:hover{
+  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.514);
+  border-color: skyblue;
+}
  
  .proc-head h1{
    font-size: 60px;
@@ -252,7 +324,7 @@
   100%{
     transform: scale(2);
     opacity: 0;
-    color: black;
+    color: rgb(255, 255, 255);
   }
 }
 
@@ -411,8 +483,12 @@
 
 /* Responsive */
  @media screen and (max-width: 767px) {
+  .navbar-nav li a{
+    margin: 5px 0;
+  }
+
    .my-banner{  
-    padding: 310px 0 0;
+    padding: 25vh 0;
     overflow: hidden;
   }
      
@@ -422,19 +498,31 @@
      opacity: 0;
      } 
      
-     50%{opacity: 1;}
+     50%{opacity: .5;}
 
      100%{
-     transform: translateY(-395px);
+     transform: translateY(-50vh);
      opacity: 0;
    }
     }
 
     .hedea-btn{
-      margin: auto;
+      margin: 5px auto;
       text-align: center;
     }
-   
+    .hedea-btn .btn{
+      width: 100%;
+    }
+
+    .work-img img{
+      height: 40px;
+    }
+
+    .box-boder{
+      margin: 15px 0;
+      height: 360px;
+    }
+
    .s-i{
      margin-bottom: 30px;
    }
@@ -450,10 +538,37 @@
    }
  }
  
- @media screen and (min-width: 786px) and (max-width: 1023px) {
+ @media screen and (min-width: 768px) and (max-width: 1023px) {
    p{font-size: 22px}
-   
-   .s-i{margin-bottom: 30px;}
+
+    .navbar-nav li a{
+    margin: 5px 0;
+  }
+
+  .hedea-btn{
+    margin: 5px auto;
+    text-align: center;
+  }
+  .hedea-btn .btn{
+    width: 100%;
+  }
+
+  .my-banner{  
+    padding: 35vh 0;
+  }
+
+  .my-banner{ 
+    padding: 35vh 0;
+    overflow: hidden;
+  }
+     
+  .work-img img{
+    height: 50px;
+  }
+
+  .box-boder{
+    height: 440px;
+  }
    
    .map{
      visibility: hidden;
