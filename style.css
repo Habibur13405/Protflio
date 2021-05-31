@@ -238,8 +238,9 @@
  }
  
  .wor-items h1{
+   margin-bottom: -20px;
    font-size: 80px;
-   opacity: .2;
+   opacity: .4;
  }
  
  .wor-items h2{
@@ -276,11 +277,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.700);
+  background: rgba(255, 255, 255, 0.8);
 }
  .s-s h1{
    font-size: 60px;
-   opacity: .3;
+   opacity: .5;
  }
  
  .s-i{
@@ -341,7 +342,7 @@
  
  .proc-head h1{
    font-size: 60px;
-   opacity: .3;
+   opacity: .5;
  }
  
  .proc-items{
@@ -375,11 +376,12 @@
 
  /* Protflio*/
  .my-protflio{
-   background: linear-gradient(135deg, #848484, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFD706);
+   background: url(https://i.imgur.com/FMNdAPu.jpg) no-repeat center center;
+   background-size: cover;
  }
  
  .m-p h1{
-   opacity: .3;
+   opacity: .5;
    text-align: center;
    font-size: 60px;
  }
@@ -425,25 +427,40 @@
  
   /* about */
  .my-about{
-   background: linear-gradient(135deg, #FF2B2B, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #B8E900);
+   color: white;
+   background: url(https://i.imgur.com/CaABoAL.jpg) no-repeat center center;
+   background-size: cover;
+   position: relative;
+   z-index: 1;
  }
+
+ .my-about::before{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.700);
+}
  
  .about-me h1{
-   opacity: .3;
+   opacity: .5;
    font-size: 60px;
  }
  
  .about-img img{
-   margin-top: 20px;
-   width: 60%;
-   border: 3px solid #B6B6B6;
-   border-radius: 50%;
+   border-radius: 10px;
+   width: 70%;
+   margin: 30px 0;
+   border: 3px solid #000000;
    transition: .5s;
  }
  
  .about-img img:hover{
-    box-shadow: 0 3px 2px 5px #2d2e2da1;
-    transform: scale(1.2);
+    box-shadow: 0 0 3px 15px #fcfcfca1;
+    transform: scale(1.1);
     border-color: #00FF48;
   }
  
