@@ -376,7 +376,7 @@
 
  /* Protflio*/
  .my-protflio{
-   background: url(https://i.imgur.com/FMNdAPu.jpg) no-repeat center center;
+   background: url(https://i.imgur.com/WXRQh8Y.jpg) no-repeat center center;
    background-size: cover;
  }
  
@@ -470,12 +470,29 @@
    text-transform: none;
  }
 
+ 
+
  .contact-me{
-   background: linear-gradient(45deg, #53A8FA, #FFFFFF, #FFFFFF, #FFFFFF, #00FF48);
+   background: url(https://i.imgur.com/ToY4fBb.jpg) no-repeat center center;
+   background-size: cover;
+   position: relative;
+   z-index: 1;
  }
+
+ .contact-me::before{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+}
+ 
  
  .contact-text h1{
-   opacity: .3;
+   opacity: .5;
   }
   
   .input-group{
@@ -507,7 +524,7 @@
   
   /* social media*/
  .social-media{
-    background: url(https://i.imgur.com/LbrfdZi.png) no-repeat center;
+    background: url(https://i.imgur.com/iVqi4cK.jpg) no-repeat center;
     background-size: cover;
   }
   .social-icon{
@@ -593,11 +610,11 @@
      margin-bottom: 30px;
    }
    
-   .map{
+   /*.map{
      visibility: hidden;
      opacity: 0;
      height: 0;
-   }
+   }*/
    
    p{
      font-size: 19px;
